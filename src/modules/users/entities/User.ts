@@ -24,7 +24,7 @@ export class User {
   password: string;
 
   @OneToMany(() => Statement, statement => statement.user)
-  statement: Account[];
+  statement: Statement[];
 
   @CreateDateColumn()
   created_at: Date;
