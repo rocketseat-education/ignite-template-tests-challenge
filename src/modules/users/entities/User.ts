@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn
 } from 'typeorm';
 import { v4 as uuid } from 'uuid';
-
+import 'reflect-metadata';
 import { Statement } from '../../statements/entities/Statement';
 
 @Entity('users')
@@ -33,7 +33,7 @@ export class User {
   updated_at: Date;
 
   constructor() {
-    if(!this.id) {
+    if (!this.id) {
       this.id = uuid();
     }
   }

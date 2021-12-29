@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn
 } from 'typeorm';
 import { v4 as uuid } from 'uuid';
-
+import 'reflect-metadata';
 import { User } from '../../users/entities/User';
 
 enum OperationType {
